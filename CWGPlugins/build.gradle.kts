@@ -49,8 +49,8 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "CarWebGuru"
-            artifactId = "plugins"
-            version = "1.2"
+            artifactId = "plugins-sdk"
+            version = "1.3"
             afterEvaluate { from(components["release"]) }
         }
     }
