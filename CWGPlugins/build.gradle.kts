@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 19
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -50,7 +50,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "CarWebGuru"
             artifactId = "plugins"
-            version = "1.0"
+            version = "1.1"
             afterEvaluate { from(components["release"]) }
         }
     }
