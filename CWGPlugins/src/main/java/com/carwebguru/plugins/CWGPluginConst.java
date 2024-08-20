@@ -74,12 +74,9 @@ public class CWGPluginConst {
         public static final String STEP_ID                      = "step-id";
         public static final String SENDER_PACKAGE               = "s-package";
         public static final String API_HASH                     = "api-hash";
-
         public static final String API_KEY                      = "api-key";
-
         public static final String ITEM_UID                     = "i-uid";
         public static final String OWNER_UID                    = "o-uid";
-
         public static final String TITLE                        = "title";
         public static final String TITLE_SHORT                  = "title-s";
         public static final String DESCR                        = "descr";
@@ -88,55 +85,37 @@ public class CWGPluginConst {
         public static final String NUMBER_MIN                   = "num-min";
         public static final String NUMBER_MAX                   = "num-max";
         public static final String PERCENT                      = "percent";
-
-
+        public static final String PID                          = "pid";
         public static final String COLOR_TEXT                   = "clr-txt";
         public static final String COLOR_BACKGROUND             = "clr-bck";
-
         public static final String VIEW_TYPE                    = "view-type";
         public static final String VIEW_STYLE                   = "view-style";
         public static final String VALUE                        = "value";
         public static final String VALUE_TYPE                   = "value-type";
         public static final String BAD_TYPE                     = "bad-type";
         public static final String ENABLE                       = "enable";
-
         public static final String ICON_TYPE                    = "icn-type";
         public static final String ICON_BITMAP                  = "icn-bmp";
         public static final String ICON_CODE                    = "icn-code";
-
         public static final String ICON_VALUE                   = "icn-value";
         public static final String ICON_GROUP                   = "icn-group";
         public static final String BIG_TEXT                     = "big-txt";
-
         public static final String PLUGIN_AUTHOR                = "p-auth";
         public static final String PLUGIN_URL                   = "p-url";
         public static final String PLUGIN_CONTACT               = "p-cnt";
         public static final String PLUGIN_VERSION               = "p-ver";
-
         public static final String NEED_START                   = "need-start";
-
         public static final String SUPPORTED_PERCENT            = "s-percent";
         public static final String SUPPORTED_COLOR_TEXT         = "s-clr-txt";
         public static final String SUPPORTED_COLOR_BACKGROUND   = "s-clr-bck";
-
-
         public static final String CALLBACK_TYPE                = "c-type";
         public static final String CALLBACK_ACTION              = "c-act";
-
         public static final String APP_PACKAGE                  = "app-package";
         public static final String APP_ACTIVITY                 = "app-activity";
-
         public static final String MESSAGE_CAPTION              = "msg-caption";
-
         public static final String MESSAGE_TEXT                 = "msg-text";
-
-
-
         public static final String EXTRA                        = "extra";
         public static final String TIMESTAMP                    = "ts";
-
         public static final String DEBUG                        = "dbg";
-
     }
-
 }
