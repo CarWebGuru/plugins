@@ -77,13 +77,13 @@ public class CWGPluginConst {
         public static final String API_KEY                      = "api-key";
         public static final String ITEM_UID                     = "i-uid";
         public static final String OWNER_UID                    = "o-uid";
-        public static final String TITLE                        = "title";
-        public static final String TITLE_SHORT                  = "title-s";
+        public static final String TITLE                        = "tit";
+        public static final String TITLE_SHORT                  = "tit-s";
         public static final String DESCR                        = "descr";
         public static final String UNITS                        = "units";
         public static final String NUMBER                       = "num";
-        public static final String NUMBER_MIN                   = "num-min";
-        public static final String NUMBER_MAX                   = "num-max";
+        public static final String NUMBER_MIN                   = "n-min";
+        public static final String NUMBER_MAX                   = "n-max";
         public static final String PERCENT                      = "percent";
         public static final String PID                          = "pid";
         public static final String COLOR_TEXT                   = "clr-txt";

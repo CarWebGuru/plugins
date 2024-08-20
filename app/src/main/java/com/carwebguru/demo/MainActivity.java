@@ -1,6 +1,7 @@
 package com.carwebguru.demo;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -11,10 +12,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.carwebguru.plugins.CWGPlugin;
+import com.carwebguru.plugins.CWGPluginConst;
+import com.carwebguru.plugins.MultiUpdateHelper;
 
 public class MainActivity extends AppCompatActivity {
 
     private CWGPlugin cwgPlugin;
+    private final String LOG_TAG = "MAIN-UI";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-
-
         cwgPlugin = new CWGPlugin(getApplicationContext());
+        demo001();
     }
 
     @Override
@@ -52,5 +55,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         cwgPlugin.onDestroy();
         super.onDestroy();
+    }
+
+    private void log(String value) {
+        Log.d(LOG_TAG, value);
+    }
+
+
+    private void demo001() {
+        log("main activity: " + this.getClass().getSimpleName());
+        log("Plugins SDK version: " + CWGPlugin.VERSION);
+
+        // Multi Update Helper demo
+        MultiUpdateHelper muh = new MultiUpdateHelper();
+        muh.add(6001, "Title-1");
+        muh.add(6002, "Title-2");
+        muh.add(6003, "Title-3");
+        muh.add(6004, "120 km/h", 120, "010D");
+        log("Update line: " + muh.asUpdateLine());
     }
 }

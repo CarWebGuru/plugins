@@ -84,6 +84,9 @@ public class MultiUpdateHelper {
         if (value.contains(";"))
             value = value.replace(";", ",");
 
+        if (value.contains("::"))
+            value = value.replace("::", " ");
+
         return value;
     }
 
@@ -112,4 +115,22 @@ public class MultiUpdateHelper {
         return sBuffer.toString();
     }
 
+
+    public String asUpdateLine() {
+        StringBuilder sb = new StringBuilder();
+
+        for(String s : items) {
+            if(sb.length() > 0) {
+                sb.append("::");
+            }
+            sb.append(s);
+        }
+
+        return sb.toString();
+    }
+
+    public void clear() {
+        items.clear();
+        bufferClear();
+    }
 }
