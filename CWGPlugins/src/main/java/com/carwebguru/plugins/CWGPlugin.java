@@ -1,10 +1,13 @@
 package com.carwebguru.plugins;
 
+import static android.content.Context.RECEIVER_EXPORTED;
+
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
@@ -222,7 +225,11 @@ public class CWGPlugin extends BroadcastReceiver {
         }
 
         if(enabled) {
-            ctx.registerReceiver(this, new IntentFilter(ACTION));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                ctx.registerReceiver(this, new IntentFilter(ACTION), RECEIVER_EXPORTED);
+            } else {
+                ctx.registerReceiver(this, new IntentFilter(ACTION));
+            }
             receiverEnabled = true;
         } else {
             ctx.unregisterReceiver(this);
