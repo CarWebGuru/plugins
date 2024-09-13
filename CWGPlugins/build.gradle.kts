@@ -37,7 +37,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
@@ -50,7 +49,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "CarWebGuru"
             artifactId = "plugins-sdk"
-            version = "1.0.5"
+            version = "1.0.6"
             afterEvaluate { from(components["release"]) }
         }
     }
