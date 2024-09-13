@@ -50,7 +50,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "CarWebGuru"
             artifactId = "plugins-sdk"
-            version = "1.0.2"
+            version = "1.0.3"
             afterEvaluate { from(components["release"]) }
         }
     }
