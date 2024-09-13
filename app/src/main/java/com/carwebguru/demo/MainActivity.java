@@ -13,7 +13,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.carwebguru.plugins.CWGPlugin;
 import com.carwebguru.plugins.CWGPluginConst;
+import com.carwebguru.plugins.ICWGPlugin;
 import com.carwebguru.plugins.MultiUpdateHelper;
+import com.carwebguru.plugins.data.CWGPluginCallback;
+import com.carwebguru.plugins.data.CWGPluginCommand;
+import com.carwebguru.plugins.data.CWGPluginExtra;
+import com.carwebguru.plugins.data.CWGPluginValues;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,8 +38,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
         cwgPlugin = new CWGPlugin(getApplicationContext());
-        //demo001();
-        demo002();
+        cwgPlugin.events = new ICWGPlugin() {
+            @Override
+            public void onCommand(CWGPluginCommand command, CWGPluginValues values, CWGPluginCallback callback, CWGPluginExtra extra, boolean myself) {
+                switch (command.getCommand()) {
+
+                    case CWGPluginConst.Commands.PARAMS:
+                        log("answer: " + command.getParams());
+                        break;
+                }
+            }
+        };
     }
 
 
@@ -45,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView lbl = findViewById(R.id.lbl);
         lbl.setText(cwgPlugin.getVersionInfo());
+
+        //demo001(); // use MultiUpdateHelper
+        demo002(); // send hello
     }
 
     @Override
@@ -78,6 +95,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void demo002() {
-        cwgPlugin.sendCommand("param1 param2 param3");
+        cwgPlugin.sendCommand("hello 12345"); // answer: hi 12345
     }
 }

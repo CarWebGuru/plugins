@@ -35,7 +35,7 @@ public class CWGPlugin extends BroadcastReceiver {
 
     private final int SEND_MODE_ANSWER = 1;
 
-    private final boolean DEBUG = false;
+    private final boolean DEBUG = true;
     private final String LOG_TAG = "CWGPlugin";
 
     private Context ctx = null;
@@ -103,6 +103,7 @@ public class CWGPlugin extends BroadcastReceiver {
 
     public void sendCommand(final String txt) {
         CWGPluginCommand pCmd = new CWGPluginCommand(CWGPluginConst.Commands.PARAMS);
+        pCmd.setParams(txt);
         sendRaw(pCmd, null, null, null, SEND_MODE_COMMAND, null);
     }
 
