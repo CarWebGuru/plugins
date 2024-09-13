@@ -44,8 +44,8 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
         ownerUid = createVar(CWGPluginConst.Keys.OWNER_UID, "");
 
         senderPackage = createVar(CWGPluginConst.Keys.SENDER_PACKAGE, "");
-        stepId = createVar(CWGPluginConst.Keys.STEP_ID, (int) 0);
-        timestamp = createVar(CWGPluginConst.Keys.TIMESTAMP, (long) 0L);
+        stepId = createVar(CWGPluginConst.Keys.STEP_ID, 0);
+        timestamp = createVar(CWGPluginConst.Keys.TIMESTAMP, 0L);
         debug = createVar(CWGPluginConst.Keys.DEBUG, false, false);
     }
 

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class MultiUpdateHelper {
 
-    private ArrayList<String> items;
-    private StringBuilder sBuffer;
+    private final ArrayList<String> items;
+    private final StringBuilder sBuffer;
 
     public MultiUpdateHelper() {
         items = new ArrayList<String>();

@@ -42,7 +42,7 @@ public class CWGPlugin extends BroadcastReceiver {
     private boolean receiverEnabled = false;
     private String pluginsPackage;
 
-    private ArrayList<CWGPluginCommand> listCommands;
+    private final ArrayList<CWGPluginCommand> listCommands;
     private int stepId = 0;
 
 

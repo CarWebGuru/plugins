@@ -17,10 +17,10 @@ public class CWGView {
 
 
     public CWGView() {
-        viewType = new CWGVar(CWGPluginConst.Keys.VIEW_TYPE, (int) 0);
+        viewType = new CWGVar(CWGPluginConst.Keys.VIEW_TYPE, 0);
         bigText = new CWGVar(CWGPluginConst.Keys.BIG_TEXT, false, false);
-        colorText = new CWGVar(CWGPluginConst.Keys.COLOR_TEXT, (int) 0);
-        colorBackground = new CWGVar(CWGPluginConst.Keys.COLOR_BACKGROUND, (int) 0);
+        colorText = new CWGVar(CWGPluginConst.Keys.COLOR_TEXT, 0);
+        colorBackground = new CWGVar(CWGPluginConst.Keys.COLOR_BACKGROUND, 0);
     }
 
     public void loadFromIntent(Intent intent) {

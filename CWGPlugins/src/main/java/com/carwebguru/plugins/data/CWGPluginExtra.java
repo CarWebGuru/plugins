@@ -31,7 +31,7 @@ public class CWGPluginExtra extends CWGPluginAbstractData {
         author = createVar(CWGPluginConst.Keys.PLUGIN_AUTHOR, "");
         url = createVar(CWGPluginConst.Keys.PLUGIN_URL, "");
         contacts = createVar(CWGPluginConst.Keys.PLUGIN_CONTACT, "");
-        pluginVersion = createVar(CWGPluginConst.Keys.PLUGIN_VERSION, (int) 0);
+        pluginVersion = createVar(CWGPluginConst.Keys.PLUGIN_VERSION, 0);
         needStart = createVar(CWGPluginConst.Keys.NEED_START, false, false);
 
         apiHash = createVar(CWGPluginConst.Keys.API_HASH, "");
