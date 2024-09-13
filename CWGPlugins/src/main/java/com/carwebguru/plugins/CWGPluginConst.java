@@ -7,27 +7,19 @@ public class CWGPluginConst {
     public static class Commands {
 
         public static final int GET_CWG_VERSION = 1;
-
         public static final int GET_CWG_INFO = 2;
-        public static final int START_CWG_ACTION = 3;
+        public static final int PARAMS = 3;
         public static final int UPDATES_START = 4;
         public static final int UPDATES_STOP = 5;
+
         public static final int WIDGETS_INSTALL = 6;
         public static final int WWIDGETS_UNINSTALL = 7;
 
-
-
         public static final int SETUP_PLUGIN_GROUP = 10;
         public static final int DELETE_PLUGIN_GROUP = 11;
-
-
-
         public static final int SETUP_PLUGIN = 20;
-
         public static final int DELETE_PLUGIN = 21;
-
         public static final int UPDATE_PLUGIN_VALUE = 22;
-
         public static final int UPDATE_PLUGINS_VALUE = 23;
     }
 
@@ -59,6 +51,13 @@ public class CWGPluginConst {
         public static final int GOOD_MIDDLE = 3; // 0 - bad, 50 - good,  100 - bad
     }
 
+    public static class ViewType {
+        public static final int AUTO        = 0; // Best view mode for current theme and screen
+        public static final int ICON_TEXT   = 1; // Icon and Text
+        public static final int ICON        = 2; // Icon only
+        public static final int TEXT        = 3; // Text only
+    }
+
 
     public static class ViewStyle {
         public static final int NORMAL = 0;
@@ -69,6 +68,7 @@ public class CWGPluginConst {
     public static class Keys {
         public static final String COMMAND                      = "cmd";
         public static final String ACTION                       = "act";
+        public static final String PARAMS                       = "params";
         public static final String LOGIC                        = "logic";
         public static final String MODULE                       = "module";
         public static final String STEP_ID                      = "step-id";

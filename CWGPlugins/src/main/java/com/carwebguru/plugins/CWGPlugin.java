@@ -26,7 +26,7 @@ public class CWGPlugin extends BroadcastReceiver {
 
     public ICWGPlugin events = null;
 
-    public static final int VERSION = 1;
+    public static final int VERSION = 2;
     public static final String ACTION = "CWG_PLUGINS_CLIENT";
 
     public static final String SERVER_PACKAGE = "com.softartstudio.carwebguru";
@@ -45,6 +45,11 @@ public class CWGPlugin extends BroadcastReceiver {
     private ArrayList<CWGPluginCommand> listCommands;
     private int stepId = 0;
 
+
+    /**
+     * CWG Plugin constructor
+     * @param ctx
+     */
     public CWGPlugin(Context ctx) {
         this.ctx = ctx;
         if(ctx != null) {
@@ -93,6 +98,12 @@ public class CWGPlugin extends BroadcastReceiver {
         }
 
         events.onCommand(command, values, callback, extra, myself);
+    }
+
+
+    public void sendCommand(final String txt) {
+        CWGPluginCommand pCmd = new CWGPluginCommand(CWGPluginConst.Commands.PARAMS);
+        sendRaw(pCmd, null, null, null, SEND_MODE_COMMAND, null);
     }
 
 
@@ -170,8 +181,6 @@ public class CWGPlugin extends BroadcastReceiver {
         incStepId();
         listCommands.add(cmd);
         sendAnswer(appPackage, cmd, null, null, null);
-
-        //Log.d(LOG_TAG, "startIfClosed[1], appPackage: " + appPackage + ", appActivity: " + appActivity + ", waitStepID: " + waitStepID);
 
         final Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {

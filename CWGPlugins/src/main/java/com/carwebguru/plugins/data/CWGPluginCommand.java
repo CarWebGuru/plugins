@@ -5,12 +5,14 @@ import com.carwebguru.plugins.CWGPluginConst;
 
 public class CWGPluginCommand extends CWGPluginAbstractData {
 
-
     private final CWGVar command;
 
     private final CWGVar action;
 
+    private final CWGVar params;
+
     private final CWGVar logic;
+
     private final CWGVar viewStyle;
 
     private final CWGVar module;
@@ -33,6 +35,7 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     public CWGPluginCommand(int value) {
         command = createVar(CWGPluginConst.Keys.COMMAND, value);
         action = createVar(CWGPluginConst.Keys.ACTION, 0);
+        params = createVar(CWGPluginConst.Keys.PARAMS, "");
         logic = createVar(CWGPluginConst.Keys.LOGIC, 0);
         module = createVar(CWGPluginConst.Keys.MODULE, 0);
         viewStyle = createVar(CWGPluginConst.Keys.VIEW_STYLE, 0);
@@ -56,7 +59,6 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     }
 
 
-
     public String getItemUid() {
         return itemUid.getValueString();
     }
@@ -66,6 +68,13 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     }
 
 
+    public String getParams() {
+        return params.getValueString();
+    }
+
+    public void setParams(String value) {
+        params.setValueString(value);
+    }
 
 
     public String getOwnerUid() {
@@ -75,8 +84,6 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     public void setOwnerUid(String value) {
         ownerUid.setValueString(value);
     }
-
-
 
 
     public String getSenderPackage() {
@@ -97,7 +104,6 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     }
 
 
-
     public long getTimestamp() {
         return timestamp.getValueLong();
     }
@@ -105,8 +111,6 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     public void setTimestamp(long value) {
         timestamp.setValueLong(value);
     }
-
-
 
 
     public boolean getDebug() {
@@ -118,7 +122,6 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     }
 
 
-
     public int getAction() {
         return action.getValueInt();
     }
@@ -126,6 +129,7 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     public void setAction(int value) {
         action.setValueInt(value);
     }
+
 
     public int getModule() {
         return module.getValueInt();
@@ -135,6 +139,7 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
         module.setValueInt(value);
     }
 
+
     public int getLogic() {
         return logic.getValueInt();
     }
@@ -142,6 +147,7 @@ public class CWGPluginCommand extends CWGPluginAbstractData {
     public void setLogic(int value) {
         logic.setValueInt(value);
     }
+
 
     public int getViewStyle() {
         return viewStyle.getValueInt();

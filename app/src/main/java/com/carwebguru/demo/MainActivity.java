@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         cwgPlugin = new CWGPlugin(getApplicationContext());
-        demo001();
+        //demo001();
+        demo002();
     }
+
 
     @Override
     protected void onStart() {
@@ -73,5 +75,9 @@ public class MainActivity extends AppCompatActivity {
         muh.add(6003, "Title-3");
         muh.add(6004, "120 km/h", 120, "010D");
         log("Update line: " + muh.asUpdateLine());
+    }
+
+    private void demo002() {
+        cwgPlugin.sendCommand("param1 param2 param3");
     }
 }
