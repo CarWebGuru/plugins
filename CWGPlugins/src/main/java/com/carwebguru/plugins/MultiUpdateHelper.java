@@ -23,7 +23,26 @@ public class MultiUpdateHelper {
         addFromBuffer();
     }
 
-    public void add(int action, String title, int iconCode) {
+    public void add(int action, String title, float numValue) {
+        bufferClear();
+        bufferAdd(CWGPluginConst.Keys.ACTION, String.valueOf(action));
+        bufferAdd(CWGPluginConst.Keys.TITLE, title);
+        bufferAdd(CWGPluginConst.Keys.NUMBER, String.valueOf(numValue));
+        addFromBuffer();
+    }
+
+    public void add(int action, String title, float numValue, String pid) {
+        bufferClear();
+        bufferAdd(CWGPluginConst.Keys.ACTION, String.valueOf(action));
+        bufferAdd(CWGPluginConst.Keys.TITLE, title);
+        bufferAdd(CWGPluginConst.Keys.NUMBER, String.valueOf(numValue));
+        bufferAdd(CWGPluginConst.Keys.PID, pid);
+        addFromBuffer();
+    }
+
+
+
+    public void addVI(int action, String title, int iconCode) {
         bufferClear();
         bufferAdd(CWGPluginConst.Keys.ACTION, String.valueOf(action));
         bufferAdd(CWGPluginConst.Keys.TITLE, title);
@@ -31,7 +50,7 @@ public class MultiUpdateHelper {
         addFromBuffer();
     }
 
-    public void add(int action, String title, int iconCode, int numValue) {
+    public void addVI(int action, String title, int iconCode, float numValue) {
         bufferClear();
         bufferAdd(CWGPluginConst.Keys.ACTION, String.valueOf(action));
         bufferAdd(CWGPluginConst.Keys.TITLE, title);
@@ -40,7 +59,7 @@ public class MultiUpdateHelper {
         addFromBuffer();
     }
 
-    public void add(int action, String title, int iconCode, int numValue, String pid) {
+    public void addVI(int action, String title, int iconCode, float numValue, String pid) {
         bufferClear();
         bufferAdd(CWGPluginConst.Keys.ACTION, String.valueOf(action));
         bufferAdd(CWGPluginConst.Keys.TITLE, title);
@@ -50,14 +69,7 @@ public class MultiUpdateHelper {
         addFromBuffer();
     }
 
-    public void add(int action, String title, int numValue, String pid) {
-        bufferClear();
-        bufferAdd(CWGPluginConst.Keys.ACTION, String.valueOf(action));
-        bufferAdd(CWGPluginConst.Keys.TITLE, title);
-        bufferAdd(CWGPluginConst.Keys.NUMBER, String.valueOf(numValue));
-        bufferAdd(CWGPluginConst.Keys.PID, pid);
-        addFromBuffer();
-    }
+
 
 
     public void addRaw(String values) {

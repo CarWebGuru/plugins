@@ -26,7 +26,7 @@ public class CWGPlugin extends BroadcastReceiver {
 
     public ICWGPlugin events = null;
 
-    public static final int VERSION = 2;
+    public static final int VERSION = 3;
     public static final String ACTION = "CWG_PLUGINS_CLIENT";
 
     public static final String SERVER_PACKAGE = "com.softartstudio.carwebguru";
@@ -35,7 +35,7 @@ public class CWGPlugin extends BroadcastReceiver {
 
     private final int SEND_MODE_ANSWER = 1;
 
-    private final boolean DEBUG = true;
+    private boolean debug = false;
     private final String LOG_TAG = "CWGPlugin";
 
     private Context ctx = null;
@@ -134,7 +134,7 @@ public class CWGPlugin extends BroadcastReceiver {
             return;
         }
 
-        if(DEBUG) {
+        if(debug) {
             Log.d(LOG_TAG, "sendCommand for package:"  + SERVER_PACKAGE + ", cmd: " + command.getCommand());
         }
 
@@ -226,7 +226,7 @@ public class CWGPlugin extends BroadcastReceiver {
             return;
         }
 
-        if(DEBUG) {
+        if(debug) {
             Log.d(LOG_TAG, "setEnabled: " + enabled);
         }
 
@@ -246,6 +246,18 @@ public class CWGPlugin extends BroadcastReceiver {
             receiverEnabled = false;
         }
     }
+
+    public void onDestroy() {
+        setEnabled(false);
+        ctx = null;
+        events = null;
+    }
+
+    public String getVersionInfo() {
+        return "CWGPlugins SDK V" + VERSION;
+    }
+
+
 
 
     public String getPluginsPackage() {
@@ -269,13 +281,11 @@ public class CWGPlugin extends BroadcastReceiver {
         stepId++;
     }
 
-    public void onDestroy() {
-        setEnabled(false);
-        ctx = null;
-        events = null;
+    public boolean isDebug() {
+        return debug;
     }
 
-    public String getVersionInfo() {
-        return "CWGPlugins SDK V" + VERSION;
+    public void setDebug(boolean debug) {
+        this.debug = debug;
     }
 }

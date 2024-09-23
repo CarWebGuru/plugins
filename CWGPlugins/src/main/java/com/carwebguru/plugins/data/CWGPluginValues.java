@@ -37,15 +37,15 @@ public class CWGPluginValues extends CWGPluginAbstractData {
         titleShort = createVar(CWGPluginConst.Keys.TITLE_SHORT, "");
         description = createVar(CWGPluginConst.Keys.DESCR, "");
         units = createVar(CWGPluginConst.Keys.UNITS, "");
-        percent = createVar(CWGPluginConst.Keys.PERCENT, 0f);
+        percent = createVar(CWGPluginConst.Keys.PERCENT, (float) 0f);
         enable = createVar(CWGPluginConst.Keys.ENABLE, true, true);
 
-        number = createVar(CWGPluginConst.Keys.NUMBER, 0);
         valueType = createVar(CWGPluginConst.Keys.VALUE_TYPE, 0);
         badType = createVar(CWGPluginConst.Keys.BAD_TYPE, 0);
 
-        numberMin = createVar(CWGPluginConst.Keys.NUMBER_MIN, 0);
-        numberMax = createVar(CWGPluginConst.Keys.NUMBER_MAX, 0);
+        number = createVar(CWGPluginConst.Keys.NUMBER, (float) 0f);
+        numberMin = createVar(CWGPluginConst.Keys.NUMBER_MIN, (float) 0f);
+        numberMax = createVar(CWGPluginConst.Keys.NUMBER_MAX, (float) 0f);
 
         icon = new CWGIcon();
         view = new CWGView();

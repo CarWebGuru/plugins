@@ -5,7 +5,6 @@ public class CWGPluginConst {
     public static final int TYPE_EMPTY = 0;
 
     public static class Commands {
-
         public static final int GET_CWG_VERSION = 1;
         public static final int GET_CWG_INFO = 2;
         public static final int PARAMS = 3;
@@ -36,7 +35,7 @@ public class CWGPluginConst {
     }
 
 
-    public static class DataType {
+    public static class ValueType {
         public static final int STRING = 0;
         public static final int INTEGER = 1;
         public static final int FLOAT = 3;
