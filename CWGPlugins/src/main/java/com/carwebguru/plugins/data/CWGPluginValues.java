@@ -145,30 +145,31 @@ public class CWGPluginValues extends CWGPluginAbstractData {
         this.valueType.setValueInt(value);
     }
 
-    public int getNumber() {
-        return number.getValueInt();
+
+    public float getNumber() {
+        return number.getValueFloat();
     }
 
-    public void setNumber(int value) {
-        this.number.setValueInt(value);
-    }
-
-
-    public int getNumberMin() {
-        return numberMin.getValueInt();
-    }
-
-    public void setNumberMin(int value) {
-        this.numberMin.setValueInt(value);
+    public void setNumber(float value) {
+        this.number.setValueFloat(value);
     }
 
 
-    public int getNumberMax() {
-        return numberMax.getValueInt();
+    public float getNumberMin() {
+        return numberMin.getValueFloat();
     }
 
-    public void setNumberMax(int value) {
-        this.numberMax.setValueInt(value);
+    public void setNumberMin(float value) {
+        this.numberMin.setValueFloat(value);
+    }
+
+
+    public float getNumberMax() {
+        return numberMax.getValueFloat();
+    }
+
+    public void setNumberMax(float value) {
+        this.numberMax.setValueFloat(value);
     }
 
 
